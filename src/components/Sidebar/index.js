@@ -3,8 +3,8 @@ import './index.scss'
 import LogoS from '../../assests/images/logo-s.png'
 import LogoSubtitle from '../../assests/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faCode, faCodeCommit, faComputer, faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 const Sidebar = () => (
     <div className="nav-bar">
         <Link className="logo" to="/">
@@ -34,8 +34,13 @@ const Sidebar = () => (
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/priyanshu-ranjan-50203420a/'>
-                    <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+                <a target="_blank" rel='noreferrer' href='https://leetcode.com/PRYNSH1224/'>
+                    <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
+                </a>
+            </li>
+            <li>
+                <a target="_blank" rel='noreferrer' href='https://www.instagram.com/priyanshu12_24/'>
+                    <FontAwesomeIcon icon={faInstagram} color="#4d4d4e" />
                 </a>
             </li>
         </ul>
