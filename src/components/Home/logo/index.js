@@ -1,14 +1,49 @@
 import './index.scss';
 import LogoS from '../../../assests/images/logo-s.png'
-import { useRef } from 'react';
-
+import { useEffect, useRef } from 'react';
+import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+import gsap from 'gsap';
 const Logo =()=>{
 
     const bgRef = useRef();
     const outlineLogoRef = useRef();
     const solidLogoRef = useRef();
 
-    
+    useEffect(() => {
+        gsap.registerPlugin(DrawSVGPlugin);
+      
+        const tl = gsap.timeline();
+      
+        tl.to(bgRef.current, {
+          duration: 1,
+          opacity: 1,
+        });
+      
+        // Define the SVG path segments manually
+        const segments = [
+          { start: 0, end: 0.2 },
+          { start: 0.2, end: 0.4 },
+          // Add more segments as needed
+        ];
+      
+        segments.forEach((segment, index) => {
+          tl.fromTo(
+            outlineLogoRef.current,
+            {
+              drawSVG: `${segment.start * 100}%`,
+            },
+            {
+              drawSVG: `${segment.end * 100}%`,
+              duration: 1.5,
+            },
+            `-=${index > 0 ? 0.5 : 0}`  // Adjust the timing if necessary
+          );
+        });
+      
+      }, []);
+      
+      
+      
 
     return(
         <div className="logo-container" ref={bgRef}>
