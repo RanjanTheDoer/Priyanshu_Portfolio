@@ -6,11 +6,13 @@ const Logo =()=>{
 
     const bgRef = useRef();
     const outlineLogoRef = useRef();
-    const solidLogoRef = useRef()
+    const solidLogoRef = useRef();
+
+    
 
     return(
-        <div className="logo-container">
-            <img className="solid-logo" src={LogoS} alt="S" />
+        <div className="logo-container" ref={bgRef}>
+            <img ref={solidLogoRef} className="solid-logo" src={LogoS} alt="S" />
             <svg
         width="559pt"
         height="897pt"
