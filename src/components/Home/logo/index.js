@@ -39,6 +39,18 @@ const Logo =()=>{
             `-=${index > 0 ? 0.5 : 0}`  // Adjust the timing if necessary
           );
         });
+
+        gsap.fromTo(
+          solidLogoRef.current,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            delay:4,
+            duration:4,
+          }
+        )
       
       }, []);
       
