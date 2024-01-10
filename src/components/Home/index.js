@@ -9,7 +9,17 @@ const Home = () => {
   const nameArray = ['P', 'R', 'I', 'Y', 'A', 'N', <img key="logo" src={LogoTitle} alt="developer" />,'H', 'U'];
   const jobArray = ['W', 'e', 'b', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.'];
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 4000);
   
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+  
+
   return (
     <div className="container home-page">
       <div className="text-zone">
