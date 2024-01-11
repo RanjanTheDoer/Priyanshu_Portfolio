@@ -17,6 +17,20 @@ const About = () => {
         };
       }, []);
 
+    /*  useEffect(() => {
+        const handleScroll = () => {
+          const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+          const newRotation = -360 * scrollPercentage; // Adjust as needed
+          setRotation(newRotation);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []); */
+
 
     return (
         <div className="container about-page">
