@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom';
 import LogoTitle from '../../assests/images/logo-s.png';
 import './index.scss';
 import { useEffect, useState } from 'react';
-import Logo from './Logo';
+import Logo from './logo';
+
+ 
+
 import AnimatedLetters from '../AnimatedLetters';
 import Loader from 'react-loaders';
 
